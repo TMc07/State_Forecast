@@ -44,3 +44,7 @@ for i in df:
 
 print(df.head)
 df.to_csv('added_percent_growth.csv', index=False)
+
+# Sorting the DataFrame based on the difference, from most positive to most negative
+df_perc_sorted = df.sort_values(by='percent_change_23over20', ascending=False)
+df_perc_sorted.to_csv('descending_pop_perc.csv', index=False)
